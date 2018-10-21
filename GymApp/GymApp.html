@@ -1,0 +1,1010 @@
+
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="GymApp.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="GymApp.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+<html>
+<body>
+
+<h1 style="color:white">
+    <center>Welcome to my Fitness App!</center>
+</h1>
+<h2 style="color:white">
+    <center>
+        Select your workout!
+    </center>
+</h2>
+
+
+<!-- App Buttons -->
+<div class="btn-group" style="width:100%">
+  <button style="width:20%" onclick="openTab('b1');">Chest</button>
+  <button style="width:20%" onclick="openTab('b2');">Back</button>
+  <button style="width:20%" onclick="openTab('b3');">Shoulders</button>
+  <button style="width:20%" onclick="openTab('b4');">Legs</button>
+  <button style="width:20%" onclick="openTab('b5');">Upper Body</button>
+</div>
+
+<!-- Button Drop Downs -->
+<div id="b1" class="containerTab" style="display:none;background:#292cf8">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h2>Overview:</h2>
+        <li>Bench Press</li>
+        <li>Incline Bench Press</li>
+        <li>Dumbbell Bench Press</li>
+        <li>Incline Dumbbell Press</li>
+        <li>Dumbbell Flies</li>
+        <br>
+        <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black">Check your Form</button>
+        <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-black">Start Your Workout</button>
+    </div>
+      
+      <div id="b2" class="containerTab" style="display:none;background:#292cf8">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h2>Overview:</h2>
+        <li>Deadlifts</li>
+        <li>One Arm Rows </li>
+        <li>Lat Pull Downs</li>
+        <li>Close Grip Row</li>
+        <li>Barbell Shrugs</li>
+        <br>
+        <button onclick="document.getElementById('id04').style.display='block'" class="w3-button w3-black">Check your Form</button>
+        <button onclick="document.getElementById('id05').style.display='block'" class="w3-button w3-black">Start Your Workout</button>
+      </div>
+      
+      <div id="b3" class="containerTab" style="display:none;background:#292cf8">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h2>Overview:</h2>
+        <li>Military Press </li>
+        <li>Dumbbell Lateral Raises</li>
+        <li>Dumbbell Military Press</li>
+        <br> 
+        <button onclick="document.getElementById('id06').style.display='block'" class="w3-button w3-black">Check your Form</button>
+        <button onclick="document.getElementById('id07').style.display='block'" class="w3-button w3-black">Start Your Workout</button>    
+      </div>
+
+      <div id="b4" class="containerTab" style="display:none;background:#292cf8">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h2>Overview:</h2>
+        <li>Squats</li>
+        <li>Front Squats</li>
+        <li>Romanian Deadlifts</li>
+        <li>Leg Extensions</li>
+        <li>Leg Curls</li>
+        <br>
+        <button onclick="document.getElementById('id08').style.display='block'" class="w3-button w3-black">Check your Form</button>
+        <button onclick="document.getElementById('id09').style.display='block'" class="w3-button w3-black">Start Your Workout</button>
+        
+      </div>
+
+      <div id="b5" class="containerTab" style="display:none;background:#292cf8">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h2>Overview:</h2>
+        <li>Dumbbell Curls</li>
+        <li>Close Grip Bench</li>
+        <li>Barbell Curls</li>
+        <li>Skull Crushers</li>
+        <li>Concentration Curls</li>
+        <br>
+        <button onclick="document.getElementById('id010').style.display='block'" class="w3-button w3-black">Check your Form</button>
+        <button onclick="document.getElementById('id011').style.display='block'" class="w3-button w3-black">Start Your Workout</button>
+      </div>
+
+<br>
+
+<!-- Chest Form Modal -->
+<div id="id02" class="w3-modal">
+ <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+  <header class="w3-container w3-blue"> 
+   <span onclick="document.getElementById('id02').style.display='none'" 
+   class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+   <h2>Chest Workout Form</h2>
+  </header>
+
+  <div class="w3-bar w3-border-bottom">
+   <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'BenchPress')">Bench Press</button>
+   <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'IBPress')">Incline Bench Press</button>
+   <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'DBPress')">Dumbbell Bench Press</button>
+   <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'DIPress')">Dumbbell Incline Bench Press</button>
+   <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'DBFlies')">Dumbbell Flies</button>
+  </div>
+
+  <div id="BenchPress" class="w3-container city">
+   <h1>Bench Press</h1>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/yM0A7v0IVB8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+   <p>Here are some tips:</p>
+   <li>Grip the bar wide, slightly beyond shoulder width</li>
+   <li>lay down and bring your legs back towards your torso as far as you can with your feet flat on the ground. This allows your back muscles to tighten allowing you to bench more</li>
+   <li>Arch your back and tighten your back muscles to help use your back muscles in this lift</li>
+   <li>Lift the bar off the rack, take a deep breath filling your stomach, this will tighten your corea allowing you to push with more force</li>
+   <li>Squeeze the bar this will allow you to push more</li>
+  </div>
+
+  <div id="IBPress" class="w3-container city">
+   <h1>Incline Bench Press</h1>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/SrqOu55lrYU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+   <p>Here are some tips:</p>
+   <li>Grip the bar wide, slightly beyond shoulder width</li>
+   <li>lay down and bring your legs back towards your torso as far as you can with your feet flat on the ground. This allows your back muscles to tighten allowing you to bench more</li>
+   <li>Arch your back and tighten your back muscles to help use your back muscles in this lift</li>
+   <li>Lift the bar off the rack, take a deep breath filling your stomach, this will tighten your corea allowing you to push with more force</li>
+   <li>Squeeze the bar this will allow you to push more</li>
+  </div>
+
+  <div id="DBPress" class="w3-container city">
+   <h1>Dumbbell Bench Press</h1>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/Y_7aHqXeCfQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+   <p>Here are some tips:</p>
+   <li>Grip the bar wide, slightly beyond shoulder width</li>
+   <li>lay down and bring your legs back towards your torso as far as you can with your feet flat on the ground. This allows your back muscles to tighten allowing you to bench more</li>
+   <li>Arch your back and tighten your back muscles to help use your back muscles in this lift</li>
+   <li>Lift the dumbbells up, take a deep breath filling your stomach, this will tighten your corea allowing you to push with more force</li>
+   <li>Squeeze the dumbbell, this will allow you to push more</li>
+  </div>
+
+<div id="DIPress" class="w3-container city">
+    <h1>Dumbbell Incline Bench Press</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8iPEnn-ltC8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p>Here are some tips:</p><br>
+   <li>lay down and bring your legs back towards your torso as far as you can with your feet flat on the ground. This allows your back muscles to tighten allowing you to bench more</li>
+   <li>Arch your back and tighten your back muscles to help use your back muscles in this lift</li>
+   <li>Lift the dumbbells up, take a deep breath filling your stomach, this will tighten your corea allowing you to push with more force</li>
+   <li>Squeeze the dumbbell, this will allow you to push more</li>
+</div>
+
+<div id="DBFlies" class="w3-container city">
+    <h1>Dumbbell Flies</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eozdVDA78K0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p>Here are some tips:</p><br>
+    <li>Keep arms slightly bent at the elbow to take strain off your shoulders</li>
+    <li>Flex your pecs at the top of the fly to work your chest muscles more</li>
+</div>
+
+  <div class="w3-container w3-light-grey w3-padding">
+   <button class="w3-button w3-right w3-white w3-border" 
+   onclick="document.getElementById('id02').style.display='none'">Close</button>
+  </div>
+ </div>
+</div>
+
+<!-- Chest Workout/Timer/Weight input? -->
+<div id="id03" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+         <header class="w3-container w3-blue"> 
+          <span onclick="document.getElementById('id03').style.display='none'" 
+          class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+          <h2>Chest Workout</h2>
+          
+         </header>
+       
+         <div class="w3-bar w3-border-bottom">
+                <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'BenchPress2')">Bench Press</button>
+                <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'IBPress2')">Incline Bench Press</button>
+                <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'DBPress2')">Dumbbell Bench Press</button>
+                <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'DIPress2')">Dumbbell Incline Bench Press</button>
+                <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'DBFlies2')">Dumbbell Flies</button>
+         </div>
+       
+         <div id="BenchPress2" class="w3-container city">
+          <h1>Bench Press</h1>
+          <p>Set One</p>
+          <form>
+              Weight:
+              <input type="setone" name="oneweight">
+              Reps:<input type="setonereps" name="onereps">
+          </form>
+          <p>Set Two</p>
+          <form>
+                Weight:
+                <input type="settwo" name="twoweight">
+                Reps:<input type="settworeps" name="tworeps">
+            </form>
+            <p>Set Three</p>
+          <form>
+                Weight:
+                <input type="setthree" name="threeweight">
+                Reps:<input type="setthreereps" name="threereps">
+            </form>
+         </div>
+       
+         <div id="IBPress2" class="w3-container city">
+          <h1>Incline Bench Press</h1>
+          <p>Set One</p>
+          <form>
+              Weight:
+              <input type="setone" name="oneweight">
+              Reps:<input type="setonereps" name="onereps">
+          </form>
+          <p>Set Two</p>
+          <form>
+                Weight:
+                <input type="settwo" name="twoweight">
+                Reps:<input type="settworeps" name="tworeps">
+            </form>
+            <p>Set Three</p>
+          <form>
+                Weight:
+                <input type="setthree" name="threeweight">
+                Reps:<input type="setthreereps" name="threereps">
+            </form>
+         </div>
+       
+         <div id="DBPress2" class="w3-container city">
+          <h1>Dumbbell Bench Press</h1>
+          <p>Set One</p>
+          <form>
+              Weight:
+              <input type="setone" name="oneweight">
+              Reps:<input type="setonereps" name="onereps">
+          </form>
+          <p>Set Two</p>
+          <form>
+                Weight:
+                <input type="settwo" name="twoweight">
+                Reps:<input type="settworeps" name="tworeps">
+            </form>
+            <p>Set Three</p>
+          <form>
+                Weight:
+                <input type="setthree" name="threeweight">
+                Reps:<input type="setthreereps" name="threereps">
+            </form>
+         </div>
+
+         <div id="DIPress2" class="w3-container city">
+                <h1>Dumbbell Incline Bench Press</h1>
+                <p>Set One</p>
+          <form>
+              Weight:
+              <input type="setone" name="oneweight">
+              Reps:<input type="setonereps" name="onereps">
+          </form>
+          <p>Set Two</p>
+          <form>
+                Weight:
+                <input type="settwo" name="twoweight">
+                Reps:<input type="settworeps" name="tworeps">
+            </form>
+            <p>Set Three</p>
+          <form>
+                Weight:
+                <input type="setthree" name="threeweight">
+                Reps:<input type="setthreereps" name="threereps">
+            </form>
+        </div>
+
+        <div id="DBFlies2" class="w3-container city">
+                <h1>Dumbbell Flies</h1>
+                <p>Set One</p>
+          <form>
+              Weight:
+              <input type="setone" name="oneweight">
+              Reps:<input type="setonereps" name="onereps">
+          </form>
+          <p>Set Two</p>
+          <form>
+                Weight:
+                <input type="settwo" name="twoweight">
+                Reps:<input type="settworeps" name="tworeps">
+            </form>
+            <p>Set Three</p>
+          <form>
+                Weight:
+                <input type="setthree" name="threeweight">
+                Reps:<input type="setthreereps" name="threereps">
+            </form>
+        </div>
+       
+         <div class="w3-container w3-light-grey w3-padding">
+          <button class="w3-button w3-right w3-white w3-border" 
+          onclick="document.getElementById('id03').style.display='none'">Close</button>
+         </div>
+        </div>
+       </div>
+
+<!-- Back workout form -->
+<div id="id04" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+         <header class="w3-container w3-blue"> 
+          <span onclick="document.getElementById('id04').style.display='none'" 
+          class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+          <h2>Back Workout Form</h2>
+         </header>
+       
+         <div class="w3-bar w3-border-bottom">
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Deadlift')">Deadlift</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'OneArmRows')">One Arm Row</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'LatPullDowns')">Lat Pull Down</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'CloseGripRow')">Close Grip Row</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'BarbellShrugs')">Barbell Shrugs</button>
+         </div>
+       
+         <div id="Deadlift" class="w3-container city">
+          <h1>Deadlift</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/UyRiw2b8yI4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>          
+          <p>Here are some tips:</p>
+          <li>Grip the bar wide, slightly beyond shoulder width</li>
+          <li>Feet should be about shoulder width apart</li>
+          <li>Grip the bar in an over under grip. One hand with palm over the bar, one hand palm under the bar</li>
+          <li>When lifitng keep the bar close to your body to avoid lower back stress</li>
+          <li>Take a deep breath into stomach to tighten core and protect spine</li>
+
+         </div>
+       
+         <div id="OneArmRows" class="w3-container city">
+          <h1>One Arm Row</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/pYcpY20QaE8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>          
+          <p>Here are some tips:</p>
+          <li>Take a deep breath into stomach to tighten core and protect spine</li>
+          <li>Make sure to not over extend your arm down.</li>
+
+         </div>
+       
+         <div id="LatPullDowns" class="w3-container city">
+          <h1>Lat Pull Downs</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/CAwf7n6Luuc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>          
+          <p>Here are some tips:</p>
+          <li>Grip the bar wide, slightly beyond shoulder width</li>
+
+         </div>
+       
+       <div id="CloseGripRow" class="w3-container city">
+           <h1>Close Grip Row</h1>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/GZbfZ033f74" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>           
+           <p>Here are some tips:</p><br>
+            <li>Take a deep breath into stomach to tighten core and protect spine</li>
+       </div>
+       
+       <div id="BarbellShrugs" class="w3-container city">
+           <h1>Barbell Shrugs</h1>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/pqYr_lb04O4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>           
+           <p>Here are some tips:</p><br>
+           <li>Hands should hold the bar a little wider then shoulder width apart</li>
+           <li>Do not roll your shoulders, this may cause stress to shouder</li>
+
+       </div>
+       
+         <div class="w3-container w3-light-grey w3-padding">
+          <button class="w3-button w3-right w3-white w3-border" 
+          onclick="document.getElementById('id04').style.display='none'">Close</button>
+         </div>
+        </div>
+       </div>
+       
+       <!-- Back Workout/Timer/Weight input? -->
+       <div id="id05" class="w3-modal">
+               <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                <header class="w3-container w3-blue"> 
+                 <span onclick="document.getElementById('id05').style.display='none'" 
+                 class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+                 <h2>Back Workout</h2>
+                 
+                </header>
+              
+                <div class="w3-bar w3-border-bottom">
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Deadlift2')">Deadlift</button>
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'OneArmRows2')">One Arm Row</button>
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'LatPullDowns2')">Lat Pull Down</button>
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'CloseGripRow2')">Close Grip Row</button>
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'BarbellShrugs2')">Barbell Shrugs</button>
+                </div>
+              
+                <div id="Deadlift2" class="w3-container city">
+                 <h1>Deadlift</h1>
+                 <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+                </div>
+              
+                <div id="OneArmRows2" class="w3-container city">
+                 <h1>One Arm Rows</h1>
+                 <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+                </div>
+              
+                <div id="LatPullDowns2" class="w3-container city">
+                 <h1>Lat Pull Downs</h1>
+                 <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+                </div>
+       
+                <div id="CloseGripRow2" class="w3-container city">
+                       <h1>Close Grip Row</h1>
+                       <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+               </div>
+       
+               <div id="BarbellShrugs2" class="w3-container city">
+                       <h1>Barbell Shrugs</h1>
+                       <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+               </div>
+              
+                <div class="w3-container w3-light-grey w3-padding">
+                 <button class="w3-button w3-right w3-white w3-border" 
+                 onclick="document.getElementById('id05').style.display='none'">Close</button>
+                </div>
+               </div>
+              </div>
+
+
+<!-- Shoulders -->
+<div id="id06" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+         <header class="w3-container w3-blue"> 
+          <span onclick="document.getElementById('id06').style.display='none'" 
+          class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+          <h2>Shoulder Workout Form</h2>
+         </header>
+       
+         <div class="w3-bar w3-border-bottom">
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'MilitaryPress')">Military Press</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'LateralRaises')">Lateral Raises</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'DumbbellMilitary')">Dumbbell Military Press</button>
+
+         </div>
+       
+         <div id="MilitaryPress" class="w3-container city">
+          <h1>Military Press</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/2yjwXTZQDDI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>          <p>Here are some bench press tips:</p>
+          <li>Grip the bar wide, slightly beyond shoulder width</li>
+          <li>Feet should be about shoulder width apart</li>
+          <li>Take a deep breath into stomach to tighten core and protect spine</li>
+
+         </div>
+       
+         <div id="LateralRaises" class="w3-container city">
+          <h1>Lateral Raises</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3VcKaXpzqRo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>          <p>Here are some tips:</p>
+            <li>Bend your arms slightly at the elbow to avoid shouler injury</li>
+
+         </div>
+       
+         <div id="DumbbellMilitary" class="w3-container city">
+          <h1>Dumbbell Military Press</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/qEwKCR5JCog" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>          <p>Here are some tips:</p>
+            <li>Keep elbows in line with body, dont let them fall forward or backwards</li>
+         </div>
+
+       
+         <div class="w3-container w3-light-grey w3-padding">
+          <button class="w3-button w3-right w3-white w3-border" 
+          onclick="document.getElementById('id06').style.display='none'">Close</button>
+         </div>
+        </div>
+       </div>
+       
+
+       <div id="id07" class="w3-modal">
+               <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                <header class="w3-container w3-blue"> 
+                 <span onclick="document.getElementById('id07').style.display='none'" 
+                 class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+                 <h2>Shoulder Workout</h2>
+                 
+                </header>
+              
+                <div class="w3-bar w3-border-bottom">
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'MilitaryPress2')">Military Press</button>
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'LateralRaises2')">Lateral Raises</button>
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'DumbbellMilitary2')">Dumbbell Military Press</button>
+                </div>
+              
+                <div id="MilitaryPress2" class="w3-container city">
+                 <h1>Military Press</h1>
+                 <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+                </div>
+              
+                <div id="LateralRaises2" class="w3-container city">
+                 <h1>Lateral Raises</h1>
+                 <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+                </div>
+              
+                <div id="DumbbellMilitary2" class="w3-container city">
+                 <h1>Dumbbell Military Press</h1>
+                 <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+                </div>
+
+                <div class="w3-container w3-light-grey w3-padding">
+                 <button class="w3-button w3-right w3-white w3-border" 
+                 onclick="document.getElementById('id07').style.display='none'">Close</button>
+                </div>
+               </div>
+              </div>
+
+<!-- Legs -->
+<div id="id08" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+         <header class="w3-container w3-blue"> 
+          <span onclick="document.getElementById('id08').style.display='none'" 
+          class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+          <h2>Check Your Form</h2>
+         </header>
+       
+         <div class="w3-bar w3-border-bottom">
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'BackSquats')">Back Squats</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'FrontSquats')">Front Squats</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'RomanianDeadlifts')">Romanian Deadlifts</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'LegExtension')">Leg Extensions</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'LegCurl')">Leg Curls</button>
+         </div>
+       
+         <div id="BackSquats" class="w3-container city">
+          <h1>Back Squats</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SW_C1A-rejs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>          
+          <p>Here are some tips:</p>
+          <li>Legs should be slightly wider then shoulders</li>
+          <li>Place the bar on top of your trap muscles</li>
+          <li>Take a deep breath to tighten core and protect spine before squating</li>
+          <li>Toes should feel like they are screwing into the ground</li>
+          <li>Keep back straight and squat to a 90 degree angle</li>
+          <li>If difficult to reach correct depth, grab a box to sit on</li>
+
+         </div>
+       
+         <div id="FrontSquats" class="w3-container city">
+          <h1>Front Squats</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/tlfahNdNPPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>          
+          <p>Here are some tips:</p>
+          <li>Take a deep breath into stomach to tighten core and protect spine</li>
+          <li>Place bar on your upper chest muscles and criss cross arms over bar if wrists aren't flexible enough</li>
+
+         </div>
+       
+         <div id="RomanianDeadlifts" class="w3-container city">
+          <h1>Romanian Deadlifts</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/JCXUYuzwNrM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>          
+          <p>Here are some tips:</p>
+          <li>Grip the bar wide, slightly beyond shoulder width</li>
+          <li>Keep legs straight and about shoulder width apat</li>
+          <li>Take a deep breath to tighten core and protect your spine</li>
+
+         </div>
+       
+       <div id="LegExtension" class="w3-container city">
+           <h1>Leg Extensions</h1>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/YyvSfVjQeL0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>           
+           <p>Here are some tips:</p><br>
+       </div>
+       
+       <div id="LegCurl" class="w3-container city">
+           <h1>Leg Curls Seated</h1>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/ELOCsoDSmrg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>           
+           <h1>Leg Curls Prone </h1> 
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/1Tq3QdYUuHs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>         
+           <p>Here are some tips:</p><br>
+
+
+       </div>
+       
+         <div class="w3-container w3-light-grey w3-padding">
+          <button class="w3-button w3-right w3-white w3-border" 
+          onclick="document.getElementById('id08').style.display='none'">Close</button>
+         </div>
+        </div>
+       </div>
+       
+
+       <div id="id09" class="w3-modal">
+               <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                <header class="w3-container w3-blue"> 
+                 <span onclick="document.getElementById('id09').style.display='none'" 
+                 class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+                 <h2>Leg Workout</h2>
+                 
+                </header>
+              
+                <div class="w3-bar w3-border-bottom">
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'BackSquat2')">Back Squat</button>
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'FrontSquat2')">Front Squat</button>
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'RomanianDeadlift2')">Romanian Deadlifts</button>
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'LegExtension2')">Leg Extensions</button>
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'LegCurl2')">Leg Curls</button>
+                </div>
+              
+                <div id="BackSquat2" class="w3-container city">
+                 <h1>Back Squats</h1>
+                 <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+                </div>
+              
+                <div id="FrontSquat2" class="w3-container city">
+                 <h1>Front Squats</h1>
+                 <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+                </div>
+              
+                <div id="RomanianDeadlift2" class="w3-container city">
+                 <h1>Romanian Deadlifts</h1>
+                 <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+                </div>
+       
+                <div id="LegExtension2" class="w3-container city">
+                       <h1>Leg Extensions</h1>
+                       <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+               </div>
+       
+               <div id="LegCurl2" class="w3-container city">
+                       <h1>Leg Curls</h1>
+                       <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+               </div>
+              
+                <div class="w3-container w3-light-grey w3-padding">
+                 <button class="w3-button w3-right w3-white w3-border" 
+                 onclick="document.getElementById('id09').style.display='none'">Close</button>
+                </div>
+               </div>
+              </div>
+
+<!-- Upper Body -->
+<div id="id010" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+         <header class="w3-container w3-blue"> 
+          <span onclick="document.getElementById('id010').style.display='none'" 
+          class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+          <h2>Upper Body Workout Form</h2>
+         </header>
+       
+         <div class="w3-bar w3-border-bottom">
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'DumbbellCurls')">Dumbbell Curls</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'CloseGripBench')">Close Grip Bench</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'BarbellCurls')">Barbell Curls</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'SkullCrushers')">Skull Crushers</button>
+          <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'ConcentrationCurls')">Concentration Curls</button>
+         </div>
+       
+         <div id="DumbbellCurls" class="w3-container city">
+          <h1>Dumbbell Curls</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/UyRiw2b8yI4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>          
+          <p>Here are some bench press tips:</p>
+
+
+         </div>
+       
+         <div id="CloseGripBench" class="w3-container city">
+          <h1>Close Grip Bench</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/pYcpY20QaE8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>          
+          <p>Here are some tips:</p>
+
+
+         </div>
+       
+         <div id="BarbellCurls" class="w3-container city">
+          <h1>Barbell Curls</h1>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/CAwf7n6Luuc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>          
+          <p>Here are some tips:</p>
+          <li>Grip the bar wide, slightly beyond shoulder width</li>
+
+         </div>
+       
+       <div id="SkullCrushers" class="w3-container city">
+           <h1>Skull Crushers</h1>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/GZbfZ033f74" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>           
+           <p>Here are some tips:</p><br>
+       </div>
+       
+       <div id="ConcentrationCurls" class="w3-container city">
+           <h1>Concentration Curls</h1>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/pqYr_lb04O4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>           
+           <p>Here are some tips:</p><br>
+
+
+       </div>
+       
+         <div class="w3-container w3-light-grey w3-padding">
+          <button class="w3-button w3-right w3-white w3-border" 
+          onclick="document.getElementById('id04').style.display='none'">Close</button>
+         </div>
+        </div>
+       </div>
+       
+       <!-- Back Workout/Timer/Weight input? -->
+       <div id="id05" class="w3-modal">
+               <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                <header class="w3-container w3-blue"> 
+                 <span onclick="document.getElementById('id05').style.display='none'" 
+                 class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+                 <h2>Back Workout</h2>
+                 
+                </header>
+              
+                <div class="w3-bar w3-border-bottom">
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'MilitaryPress2')">Deadlift</button>
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'LateralRaises2')">One Arm Row</button>
+                        <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'DumbbellMilitary2')">Lat Pull Down</button>
+
+                </div>
+              
+                <div id="MilitaryPress2" class="w3-container city">
+                 <h1>Deadlift</h1>
+                 <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+                </div>
+              
+                <div id="LateralRaises2" class="w3-container city">
+                 <h1>One Arm Rows</h1>
+                 <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+                </div>
+              
+                <div id="DumbbellMilitary2" class="w3-container city">
+                 <h1>Lat Pull Downs</h1>
+                 <p>Set One</p>
+                 <form>
+                     Weight:
+                     <input type="setone" name="oneweight">
+                     Reps:<input type="setonereps" name="onereps">
+                 </form>
+                 <p>Set Two</p>
+                 <form>
+                       Weight:
+                       <input type="settwo" name="twoweight">
+                       Reps:<input type="settworeps" name="tworeps">
+                   </form>
+                   <p>Set Three</p>
+                 <form>
+                       Weight:
+                       <input type="setthree" name="threeweight">
+                       Reps:<input type="setthreereps" name="threereps">
+                   </form>
+                </div>
+              
+                <div class="w3-container w3-light-grey w3-padding">
+                 <button class="w3-button w3-right w3-white w3-border" 
+                 onclick="document.getElementById('id05').style.display='none'">Close</button>
+                </div>
+               </div>
+              </div>
+
+
+</body>
+</html>
