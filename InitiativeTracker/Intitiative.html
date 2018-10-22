@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="Initiative.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="Initiative.js"></script>
+
+
+
+<head>
+<h1>
+    <center>
+        Welcome to the Initiative Tracker
+    </center>
+</h1>
+
+<h2>
+    <center>
+        Happy Gaming
+    </center>
+</h2>
+
+
+
+</head>
+
+<body>
+<h2>
+    The Initiative:
+</h2>
+<table>
+        <tr>
+          <th>Initiative</th>
+          <th>Name</th> 
+          <th>Hit Points</th>
+          <th>Armor Class</th>
+        </tr>
+      </table>
+
+      <br>
+      <br>
+
+
+
+<h2>New Combatant</h2>
+<table>
+      <tr>
+        <th>Initiative: <input type="text" name="intv" id="intv" /></th>
+        <th> Name: <input type="text" name="lname" id="lname" /></th>
+        <th>Hit Points: <input type="text" name="hp" id="hp" /></th>
+        <th>Armor Class: <input type="text" name="ac" id="ac" /></th>
+        <th><button onclick="addRow();">Add Row</button><br/><br/></th>
+        </tr>
+<table>
+
+<br>
+<br>
+<br>
+
+<h2>Dice Roller</h2>
+
+<h2>Your Number</h2><h2 id="roll"></h2>
+
+<table id="buttonTable">
+    <tr>
+        <th id="buttonth"><button class="button button5" onclick="d4();">D4</button></th>
+        <th id="buttonth"><button class="button button5" onclick="d6();">D6</button></th>
+        <th id="buttonth"><button class="button button5" onclick="d8();">D8</button></th>
+        <th id="buttonth"><button class="button button5" onclick="d10();">D10</button></th>
+        <th id="buttonth"><button class="button button5" onclick="d12();">D12</button></th>
+        <th id="buttonth"><button class="button button5" onclick="d20();">D20</button></th>
+        <th id="buttonth"><button class="button button5" onclick="d100();">D100</button></th>
+        </tr>
+</table>
+
+
+
+
+
+
+</body>
