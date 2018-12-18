@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="Creator.css">
+    <link rel="stylesheet" href="titleCss.css">
+
+    <script src="Creator.js"></script>
+    <script src="barbarianJson.js"></script>
+    <script src="bardJson.js"></script>
+    <script src="clericJson.js"></script>
+    <script src="druidJson.js"></script>
+    <script src="figherJson.js"></script>
+    <script src="monkJson.js"></script>
+    <script src="paladinJson.js"></script>
+    <script src="rangerJson.js"></script>
+    <script src="rougeJson.js"></script>
+    <script src="sorcererJson.js"></script>
+    <script src="warlockJson.js"></script>
+    <script src="wizardJson.js"></script>
+</head>
+
+<body>
+
+    <div id="header1">
+        <svg>
+            <!-- Symbol-->
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="90%">Welcome to my D&D Creator</text>
+            </symbol>
+            <!-- Duplicate symbols-->
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+        </svg>
+    </div>
+
+    <hr />
+
+    <div>
+        <h3 id="center">Character Information:</h3>
+        <br>
+        <form>
+            <div id="section">
+
+                Name:
+                <input name="name" type="text" />
+                <br />
+                <br>
+
+                Age: <input max="99" min="1" name="age" step="1" type="number" value="18" />
+                <br />
+                <br>
+
+                Height:
+                <input name="height" type="text" />
+                <br />
+                <br>
+
+                Weight:
+                <input name="weight" type="text" />
+                <br />
+                <br>
+
+                <input checked="checked" name="male" type="radio" value="male" />Male
+                <input name="female" type="radio" value="female" /> Female
+                <br />
+                <br>
+
+                Pick your alignment:
+                <br />
+                <select id="alignment" name="alignment">
+                    <option selected="selected" value="lg">Lawful Good</option>
+                    <option value="cg">Chaotic Good</option>
+                    <option value="ln">Lawful Neutral</option>
+                    <option value="tn">True Neutral</option>
+                    <option value="cn">Chaotic Neutral</option>
+                    <option value="le">Lawful Evil</option>
+                    <option value="ne">Neutral Evil</option>
+                    <option value="ce">Chaotic Evil</option>
+                </select>
+
+            </div>
+
+            <div id="section">
+
+                Pick your race:
+                <br />
+                <select id="race" name="race" onchange="showInputRace()">
+                    <option selected="selected" value="gnome">Gnome</option>
+                    <option value="halfling">Halfling</option>
+                    <option value="dwarf">Dwarf</option>
+                    <option value="elf">Elf</option>
+                    <option value="halfelf">Half-Elf</option>
+                    <option value="tiefling">Tiefling</option>
+                    <option value="human">Human</option>
+                    <option value="dragonborn">Dragonborn</option>
+                    <option value="halforc">Half-Orc</option>
+                </select>
+                <br />
+                <br>
+
+                Pick your background :
+                <br />
+                <select id="background" name="background" onchange="showInputBackground()">
+                    <option selected="selected" value="acolyte">Acolyte</option>
+                    <option value="charlatan">Charlatan</option>
+                    <option value="criminal">Criminal</option>
+                    <option value="entertainer">Entertainer</option>
+                    <option value="folkhero">Folkhero</option>
+                    <option value="guildartisan">Guild Artisan</option>
+                    <option value="hermit">Hermit</option>
+                    <option value="noble">Noble</option>
+                    <option value="outlander">Outlander</option>
+                    <option value="sage">Sage</option>
+                    <option value="sailor">Sailor</option>
+                    <option value="soldier">Soldier</option>
+                </select>
+
+                <br />
+                <br>
+
+                Pick your class:
+                <br />
+                <select id="heroClass" name="heroClass" onchange="showInputClass()">
+                    <option selected="selected" value="fighter">Fighter</option>
+                    <option value="rogue">Rogue</option>
+                    <option value="wizard">Wizard</option>
+                    <option value="barbarian">Barbarian</option>
+                    <option value="cleric">Cleric</option>
+                    <option value="ranger">Ranger</option>
+                    <option value="paladin">Paladin</option>
+                    <option value="warlock">Warlock</option>
+                    <option value="monk">Monk</option>
+                    <option value="bard">Bard</option>
+                    <option value="sorcerer">Sorcerer</option>
+                    <option value="druid">Druid</option>
+                </select>
+
+                <br />
+                <br>
+
+            </div>
+
+            <div id="section">
+                Race Benefits:
+                <p><span id='displayRace'></span></p>
+                <br>
+                Background Benefits:
+                <p><span id='displayBackground'></span></p>
+                <br>
+            </div>
+
+        </form>
+    </div>
+    <br>
+
+    <hr />
+
+    <div>
+        <h3>Your Stats:</h3>
+
+        <div id="sectionStats">
+            <h4>Strength</h4>
+            <output type="number" id="str"></output>
+            <br>
+            <button type="button" onclick="rollStats(this)" id="strBtn">Roll it!</button>
+        </div>
+
+        <div id="sectionStats">
+            <h4>Dexterity</h4>
+            <output type="number" id="dex"></output>
+            <br>
+            <button type="button" onclick="rollStats(this)" id="dexBtn">Roll it!</button>
+        </div>
+
+        <div id="sectionStats">
+            <h4>Constitution</h4>
+            <output type="number" id="con"></output>
+            <br>
+            <button type="button" onclick="rollStats(this)" id="conBtn">Roll it!</button>
+        </div>
+
+        <div id="sectionStats">
+            <h4>Intelligence</h4>
+            <output type="number" id="int"></output>
+            <br>
+            <button type="button" onclick="rollStats(this)" id="intBtn">Roll it!</button>
+        </div>
+
+        <div id="sectionStats">
+            <h4>Wisdom</h4>
+            <output type="number" id="wis"></output>
+            <br>
+            <button type="button" onclick="rollStats(this)" id="wisBtn">Roll it!</button>
+        </div>
+
+        <div id="sectionStats">
+            <h4>Charisma</h4>
+            <output type="number" id="chr"></output>
+            <br>
+            <button type="button" onclick="rollStats(this)" id="chrBtn">Roll it!</button>
+        </div>
+    </div>
+    <br>
+
+    <hr />
+    <br>
+
+    <h3>Class Features:</h3>
+    <output id="showData"></output>
+    <br>
+</body>
+
+
+
+</html>

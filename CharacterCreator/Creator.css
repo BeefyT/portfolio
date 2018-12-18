@@ -1,0 +1,49 @@
+
+#wrap {
+    width:600px;
+    margin:0 auto;
+ }
+ #section {
+  display: inline-block;
+  margin: 0 1.5%;
+  width: 30%;
+  text-align: center;
+
+ }
+
+ #sectionStats {
+    display: inline-block;
+    margin: 0 1.5%;
+    width: 13%;
+    text-align: center;
+  
+   }
+
+th, td, p, input {
+    font:14px Verdana;
+}
+
+table, th, td 
+{
+    border: solid 1px #DDD;
+    border-collapse: collapse;
+    padding: 2px 3px;
+    text-align: center;
+}
+
+th {
+    font-weight:bold;
+}
+
+body{
+    background-color: rgb(26, 26, 26);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+}
+
+h3{
+    color:#f029be;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
